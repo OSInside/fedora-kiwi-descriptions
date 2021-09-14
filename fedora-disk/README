@@ -1,0 +1,14 @@
+Build
+=====
+
+$ kiwi-ng system build --description fedora-disk --target-dir /tmp/mytest
+
+Boot
+====
+
+$ kvm -serial stdio Fedora-34.0_disk.x86_64-1.0.0.raw
+
+Login
+=====
+
+$ root:linux
