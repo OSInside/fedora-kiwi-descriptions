@@ -11,6 +11,7 @@
     </profiles>
     <preferences>
         <version>1.0.0</version>
+        <release-version>34</release-version>
         <packagemanager>dnf</packagemanager>
         <bootsplash-theme>charge</bootsplash-theme>
         <bootloader-theme>breeze</bootloader-theme>
@@ -29,11 +30,11 @@
     <users>
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
-    <repository type="rpm-md" alias="Fedora34" sourcetype="metalink">
-        <source path="https://mirrors.fedoraproject.org/metalink?repo=fedora-34&amp;arch=x86_64"/>
+    <repository type="rpm-md" alias="fedora" sourcetype="metalink">
+        <source path="https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch"/>
     </repository>
-    <repository type="rpm-md" alias="Fedora34-updates" sourcetype="metalink">
-        <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f34&amp;arch=x86_64"/>
+    <repository type="rpm-md" alias="updates" sourcetype="metalink">
+        <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;arch=$basearch"/>
     </repository>
     <packages type="image">
         <package name="grub2"/>
